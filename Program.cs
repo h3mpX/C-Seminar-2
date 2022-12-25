@@ -24,29 +24,40 @@ else
 
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-/*
+
 int ThirdDigit(int number)
 {
-    while(number > 999)
+    while (number > 999)
     {
         number /= 10;
     }
     return number % 10;
 }
 
-Console.Write("Введите число: "); 
+Console.Write("Введите целое положительное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if(number / 100 != 0)
+
+if (number < 0)
 {
-    Console.WriteLine($"Третьей цифрой в числе {number} является {ThirdDigit(number)}");
+    Console.WriteLine("Вы ввели неподходящее число");
 }
 else
 {
-    Console.WriteLine("Третья цифра в введенном числе отсутствует");
+    if (number / 100 != 0)
+    {
+        Console.WriteLine($"Третьей цифрой в числе {number} является {ThirdDigit(number)}");
+    }
+    else
+    {
+        Console.WriteLine("Третья цифра в введенном числе отсутствует");
+    }
 }
 
 
-*/
+
+
+
+
 
 //Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
